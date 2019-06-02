@@ -12,56 +12,56 @@
                 <h1 class="text-center">Train Scheduler</h1>
             </div>
         </div>
+        <!-- Current time of trains -->
         <div class="container">
                 <div class="col-lrg-12">
                     <div class="jumbotron">
-                        <h3 class="text-center">Current time</h3>
+                            <div class="card">
+                            <div class="card-body" id="article-section">
+                            <h3 class="text-center">Current time</h3>
+                        </div>
+                        </div>
                     </div>
                 </div>
         </div>
         <div class="row">
             <div class="col-sm-12">
                 <br>
-                <!-- First card is for handling the search parameters -->
+                <!-- search parameters -->
                 <div class="card">
                 <div class="card-header">
                     <strong>
-                    <i class="fa fa-list-alt"></i> Search Parameters</strong>
+                    <i class="fa fa-list-alt"></i> Search for trains
                 </div>
                 <div class="card-body">
         
-                    <!-- Here we create an HTML Form for handling the inputs-->
+                    <!-- Form for handling the inputs of user-->
                     <form role="form">
         
-                    <!-- Here we create the text box for capturing the search term-->
                     <div class="form-group">
                         <label for="search">Train Name</label>
                         <input type="text" class="form-control" id="train-search">
                     </div>
         
-                    <!-- Here we capture the number of records that the user wants to retrieve  -->
+                    <!-- Search for train destination -->
                     <div class="form-group">
                         <label for="pwd">Destination</label>
-                        <select id="article-count" class="custom-select" aria-labelledby="dropdownMenuButton">
-                        <!-- <option selected value="1">1</option>>
-                        <option value="5" selected>5</option>
-                        <option value="10">10</option> -->
-                        </select>
+                        <input type ="text" class="form-control" id="destination-search">
                     </div>
         
-                    <!-- Here we capture the Start Year Parameter-->
+                    <!--finds the train time -->
                     <div class="form-group">
-                        <label for="start-year">First Train Time(HH:MM)</label>
+                        <label for="trainTime">First Train Time(HH:MM)</label>
                         <input type="text" class="form-control" id="train-time">
                     </div>
         
-                    <!-- Here we capture the End Year Parameter -->
+                    <!-- Frequency for when train comes-->
                     <div class="form-group">
-                        <label for="end-year">Frequency</label>
+                        <label for="trainFrequency">Frequency</label>
                         <input type="text" class="form-control" id="frequency-time">
                     </div>
         
-                    <!-- Here we have our final submit button -->
+                    <!-- Search and clear buttons -->
                     <button type="submit" class="btn btn-default" id="run-search">
                         <i class="fa fa-search"></i> Search</button>
                     <button class="btn btn-default" id="clear-all">
@@ -78,14 +78,7 @@
                 <div class="col-sm-12">
                     <br>
         
-                <!-- This card will initially be made up of a card and wells for each of the articles retrieved -->
-                <div class="card">
-                
-        
-                <!-- This main card will hold each of the resulting articles -->
-                <div class="card-body" id="article-section">
-                </div>
-                </div>
+               
                 </div>
                 </div>
             
@@ -100,6 +93,7 @@
         </div>
 
         <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+        <script src="assets/moment/moment.min.js"></script>
         <script src="https://code.jquery.com/jquery.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script type="text/javascript" src="assets/js/app.js"></script>
